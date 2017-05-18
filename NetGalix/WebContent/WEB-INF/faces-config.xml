@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<faces-config xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_1_2.xsd"
+	version="1.2">
+
+	<!-- Managed Bean -->
+	<managed-bean>
+		<managed-bean-name>grupoBean</managed-bean-name>
+		<managed-bean-class>br.com.netgalix.bean.GrupoBean</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>perfilBean</managed-bean-name>
+		<managed-bean-class>br.com.netgalix.bean.PerfilBean</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+		<managed-property>
+			<property-name>mensagemInicial</property-name>
+			<value>Visitante!</value>
+		</managed-property>
+		<managed-property>
+			<property-name>mensagemInicial_2</property-name>
+			<value>Bem vindo</value>
+		</managed-property>
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>mantenedorBean</managed-bean-name>
+		<managed-bean-class>br.com.netgalix.bean.MantenedorBean</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+
+	<managed-bean>
+		<managed-bean-name>produtoBean</managed-bean-name>
+		<managed-bean-class>br.com.netgalix.bean.ProdutoBean</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+
+	<!-- Regras de Navegacao -->
+	<!-- navegação para cadastrar produto -->
+	<navigation-rule>
+		<from-view-id>/gerente/produto/cadastrar.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>produtoSucesso</from-outcome>
+			<to-view-id>/gerente/produto/sucessoProduto.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>/gerente/produto/cadastrar.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>erroProduto</from-outcome>
+			<to-view-id>/gerente/produto/erroProduto.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<!-- Regra de navegacao do cliente -->
+		<navigation-case>
+			<from-outcome>index</from-outcome>
+			<to-view-id>/index.jsp</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>sucesso</from-outcome>
+			<to-view-id>/cliente/sucesso.jsp</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>formulario</from-outcome>
+			<to-view-id>/cliente/formulario_cliente.jsp</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>cadastroCliente</from-outcome>
+			<to-view-id>/cliente/cadastro.jsp</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>boasVindas</from-outcome>
+			<to-view-id>/cliente/bem_vindo.jsp</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>redirecionarCadastro</from-outcome>
+			<to-view-id>/redirecionar/redirecionar_cadastro.jsp</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>menu_segundario</from-outcome>
+			<to-view-id>/menu_segundario.jsp</to-view-id>
+		</navigation-case>
+
+		<!-- Regra de navegacao do Mantenedor -->
+
+
+
+		<navigation-case>
+			<from-outcome>alterar_produto</from-outcome>
+			<to-view-id>/gerente/produto/alterar.jsp</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>excluir_produto</from-outcome>
+			<to-view-id>/gerente/produto/excluir.jsp</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>alterar_usuario</from-outcome>
+			<to-view-id>/gerente/produto/alterar.jsp</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>excluir_usuario</from-outcome>
+			<to-view-id>/gerente/produto/excluir.jsp</to-view-id>
+		</navigation-case>
+
+		<navigation-case>
+			<from-outcome>redirecionarMantenedor</from-outcome>
+			<to-view-id>/redirecionar/redirecionar_mantenedor.jsp</to-view-id>
+		</navigation-case>
+
+	</navigation-rule>
+
+	<!-- Configuralçao do meu SystemMessage -->
+	<application>
+		<resource-bundle>
+			<base-name>resources/SystemMessages</base-name>
+			<var>msg</var>
+		</resource-bundle>
+		<locale-config>
+			<default-locale>pt_BR</default-locale>
+		</locale-config>
+	</application>
+
+</faces-config>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf12850332685954" configfile="/NetGalix/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="gerente/produto/cadastrar" id="pf12882181570510" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf12882181854773 pf12891565738690" path="/gerente/produto/cadastrar.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="gerente/produto/erroProduto" id="pf12882181854774" referenceLink="//@navigationRule.1/@navigationCase.0/@toViewId|" inlinks="pf12882181854773" path="/gerente/produto/erroProduto.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="*" id="pf12882181854785" outlinks="pf12882181854786 pf12882181854787 pf12882181854788 pf12882181854789 pf128821818547810 pf128821818547811 pf128821818547812 pf128821818547813 pf128821818547814 pf128821818547815 pf128821818547816 pf128821818547817" path="*"/>
+  <nodes xsi:type="pageflow:PFPage" name="index" id="pf128821818547818" referenceLink="//@navigationRule.2/@navigationCase.0/@toViewId|" inlinks="pf12882181854786" path="/index.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="cliente/sucesso" id="pf128821818547819" referenceLink="//@navigationRule.2/@navigationCase.1/@toViewId|" inlinks="pf12882181854787" path="/cliente/sucesso.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="cliente/formulario_cliente" id="pf128821818547820" referenceLink="//@navigationRule.2/@navigationCase.2/@toViewId|" inlinks="pf12882181854788" path="/cliente/formulario_cliente.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="cliente/cadastro" id="pf128821818547821" referenceLink="//@navigationRule.2/@navigationCase.3/@toViewId|" inlinks="pf12882181854789" path="/cliente/cadastro.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="cliente/bem_vindo" id="pf128821818547822" referenceLink="//@navigationRule.2/@navigationCase.4/@toViewId|" inlinks="pf128821818547810" path="/cliente/bem_vindo.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="redirecionar/redirecionar_cadastro" id="pf128821818547823" referenceLink="//@navigationRule.2/@navigationCase.5/@toViewId|" inlinks="pf128821818547811" path="/redirecionar/redirecionar_cadastro.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="menu_segundario" id="pf128821818547824" referenceLink="//@navigationRule.2/@navigationCase.6/@toViewId|" inlinks="pf128821818547812" path="/menu_segundario.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="gerente/produto/alterar" id="pf128821818547825" referenceLink="//@navigationRule.2/@navigationCase.9/@toViewId|" inlinks="pf128821818547813 pf128821818547815" path="/gerente/produto/alterar.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="gerente/produto/excluir" id="pf128821818547826" referenceLink="//@navigationRule.2/@navigationCase.10/@toViewId|" inlinks="pf128821818547814 pf128821818547816" path="/gerente/produto/excluir.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="redirecionar/redirecionar_mantenedor" id="pf128821818547927" referenceLink="//@navigationRule.2/@navigationCase.11/@toViewId|" inlinks="pf128821818547817" path="/redirecionar/redirecionar_mantenedor.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="gerente/produto/sucessoProduto" id="pf12891565738701" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf12891565738690" path="/gerente/produto/sucessoProduto.jsp"/>
+  <links id="pf12882181854773" target="pf12882181854774" source="pf12882181570510" outcome="erroProduto"/>
+  <links id="pf12882181854786" target="pf128821818547818" source="pf12882181854785" outcome="index"/>
+  <links id="pf12882181854787" target="pf128821818547819" source="pf12882181854785" outcome="sucesso"/>
+  <links id="pf12882181854788" target="pf128821818547820" source="pf12882181854785" outcome="formulario"/>
+  <links id="pf12882181854789" target="pf128821818547821" source="pf12882181854785" outcome="cadastroCliente"/>
+  <links id="pf128821818547810" target="pf128821818547822" source="pf12882181854785" outcome="boasVindas"/>
+  <links id="pf128821818547811" target="pf128821818547823" source="pf12882181854785" outcome="redirecionarCadastro"/>
+  <links id="pf128821818547812" target="pf128821818547824" source="pf12882181854785" outcome="menu_segundario"/>
+  <links id="pf128821818547813" target="pf128821818547825" source="pf12882181854785" outcome="alterar_produto"/>
+  <links id="pf128821818547814" target="pf128821818547826" source="pf12882181854785" outcome="excluir_produto"/>
+  <links id="pf128821818547815" target="pf128821818547825" source="pf12882181854785" outcome="alterar_usuario"/>
+  <links id="pf128821818547816" target="pf128821818547826" source="pf12882181854785" outcome="excluir_usuario"/>
+  <links id="pf128821818547817" target="pf128821818547927" source="pf12882181854785" outcome="redirecionarMantenedor"/>
+  <links id="pf12891565738690" target="pf12891565738701" source="pf12882181570510" outcome="produtoSucesso"/>
+</pageflow:Pageflow>
